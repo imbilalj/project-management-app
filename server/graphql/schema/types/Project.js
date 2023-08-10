@@ -1,5 +1,8 @@
 import { GraphQLID, GraphQLObjectType, GraphQLString } from 'graphql';
 import { Client } from './Client.js';
+import { ClientService } from '../../../services/client.service.js';
+
+const clientService = new ClientService();
 
 export const Project = new GraphQLObjectType({
   name: 'Project',
@@ -14,7 +17,7 @@ export const Project = new GraphQLObjectType({
     client: {
       type: Client,
       resolve({ clientId }) {
-        // Return the client of a project
+        return clientService.findById(clientId);
       },
     },
   }),

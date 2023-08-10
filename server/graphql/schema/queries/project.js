@@ -1,5 +1,8 @@
 import { GraphQLID, GraphQLList, GraphQLNonNull } from 'graphql';
 import { Project } from '../types/Project.js';
+import { ProjectService } from '../../../services/project.service.js';
+
+const projectService = new ProjectService();
 
 export const project = {
   type: Project,
@@ -7,13 +10,13 @@ export const project = {
     id: { type: new GraphQLNonNull(GraphQLID) },
   },
   resolve(_, { id }) {
-    // Return project
+    return projectService.findById(id);
   },
 };
 
 export const projects = {
   type: new GraphQLList(Project),
   resolve() {
-    // Return all projects
+    return projectService.findAll();
   },
 };
