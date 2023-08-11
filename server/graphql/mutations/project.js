@@ -4,8 +4,8 @@ import {
   CreateProjectInput,
   UpdateProjectInput,
 } from '../types/inputs/ProjectInput.js';
-import { isObjectId } from '../../../utils/functions.js';
-import { ProjectService } from '../../../services/project.service.js';
+import { isObjectId } from '../../utils/functions.js';
+import { ProjectService } from '../../services/project.service.js';
 
 const projectService = new ProjectService();
 

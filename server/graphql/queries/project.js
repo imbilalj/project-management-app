@@ -1,6 +1,6 @@
 import { GraphQLID, GraphQLList, GraphQLNonNull } from 'graphql';
 import { Project } from '../types/Project.js';
-import { ProjectService } from '../../../services/project.service.js';
+import { ProjectService } from '../../services/project.service.js';
 
 const projectService = new ProjectService();
 

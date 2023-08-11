@@ -1,5 +1,5 @@
 import { GraphQLEnumType } from 'graphql';
-import { ProjectStatus } from '../../../../constants/project-status.js';
+import { ProjectStatus } from '../../../constants/project-status.js';
 
 export const ProjectStatusEnum = new GraphQLEnumType({
   name: 'ProjectStatusEnum',

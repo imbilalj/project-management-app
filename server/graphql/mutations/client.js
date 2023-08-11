@@ -4,7 +4,7 @@ import {
   CreateClientInput,
   UpdateClientInput,
 } from '../types/inputs/ClientInput.js';
-import { ClientService } from '../../../services/client.service.js';
+import { ClientService } from '../../services/client.service.js';
 
 const clientService = new ClientService();
 
