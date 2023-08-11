@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import { ProjectStatus } from '../constants/project-status.js';
 
 const ProjectSchema = new mongoose.Schema(
   {
@@ -6,7 +7,8 @@ const ProjectSchema = new mongoose.Schema(
     description: { type: String, trim: true },
     status: {
       type: String,
-      enum: ['Open', 'In Progress', 'Completed'],
+      enum: Object.values(ProjectStatus),
+      default: ProjectStatus.OPEN,
       required: true,
     },
     clientId: { type: mongoose.Schema.Types.ObjectId, ref: 'Client' },
