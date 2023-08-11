@@ -5,7 +5,7 @@ import {
   GraphQLString,
 } from 'graphql';
 import { ProjectStatusEnum } from '../enums/ProjectStatusEnum.js';
-import { ProjectStatus } from '../../../../constants/project-status.js';
+import { ProjectStatus } from '../../../constants/project-status.js';
 
 export const CreateProjectInput = new GraphQLInputObjectType({
   name: 'CreateProjectInput',

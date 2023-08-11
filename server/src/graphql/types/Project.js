@@ -1,6 +1,6 @@
 import { GraphQLID, GraphQLObjectType, GraphQLString } from 'graphql';
 import { Client } from './Client.js';
-import { ClientService } from '../../../services/client.service.js';
+import { ClientService } from '../../services/client.service.js';
 
 const clientService = new ClientService();
 
