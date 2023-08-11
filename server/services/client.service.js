@@ -16,4 +16,21 @@ export class ClientService {
   async findAll() {
     return await Client.find();
   }
+
+  async create(client) {
+    const createdClient = new Client(client);
+    return createdClient.save();
+  }
+
+  async update(id, update) {
+    const updatedClient = Client.findByIdAndUpdate(id, update, { new: true });
+
+    return updatedClient;
+  }
+
+  async delete(id) {
+    const deletedClient = Client.findOneAndDelete({ _id: id });
+
+    return deletedClient;
+  }
 }
