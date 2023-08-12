@@ -10,7 +10,7 @@ const port = process.env.PORT;
 
 const app = express();
 
-const db = new Database();
+new Database();
 
 app.use(
   '/graphql',
